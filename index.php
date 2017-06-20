@@ -13,6 +13,9 @@ and open the template in the editor.
         <?php
         /*
         Buen examen!!!
+         * 
+         * Gracias
+         * 
          *          */
         ?>
     </body>
