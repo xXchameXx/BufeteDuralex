@@ -1,0 +1,134 @@
+* { margin: auto; padding: 0; font-family: arial;  }
+
+/*body: cuerpo de la página*/
+body { background-color: #808080; }
+
+/*cabecera*/
+header { background-color: black; }
+header h1 { text-align: center; color: white; padding: 0.5em; font-size: 2.5em;  font-family: "Times New Roman", Times, serif;}
+header h2 { text-align: center; color: #663366; padding: 0.5em; font-size: 1.2em; }
+
+
+
+/*principal: section:*/
+section { width: 50%; background-color: white; float: center; border: 3px double red;}
+section h1 { text-align: center; padding: 0.5em; color: olive; font-size: 1.4em;  font-family: "Times New Roman", Times, serif; }
+section h2 { text-align: center; padding: 0.5em; color: grey; font-size: 1.2em; }
+section h3 { text-align: left; padding: 0.3em 3em; color: #663366; font-size: 1em;  }
+
+/*artículos: article*/
+article { margin: 0.5em 3em; padding: 0.5em 2em; background-color: black; border: 3px double red; color: white; }
+article p { text-align: justify; }
+
+
+/*pie de página: footer*/
+footer { clear: both; background-color: black; }
+footer h1 { text-align: center; font-size: 2em; color: white; padding: 0.7em; }
+footer h2 { text-align: center; font-size: 1em; padding: 0.4em; color: white; }
+footer a { text-decoration: none; color: green; }
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
+	background-color: #4a4a4a;
+	color:#9fda58;
+
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
+	background-color: #4a4a4a;
+	color:#9fda58;
+
+}
+input[type=time], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
+	background-color: #4a4a4a;
+	color:#9fda58;
+
+}
+input[type=checkbox], select {
+
+	color:#9fda58;
+
+}
+input::-webkit-input-placeholder {
+  color: #e74c3c;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font-family: "Times New Roman", Times, serif;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+legend { font-size: 2.5em;  font-family: "Times New Roman", Times, serif; }
+td {  font-family: "Times New Roman", Times, serif;  }
+th {  background-color: #4CAF50; color: white;}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a:hover, a:active {
+    background-color: red;
+}

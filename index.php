@@ -11,12 +11,19 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="solemne1css.css" title="miEjemplo" media="all" />
         <meta charset="UTF-8">
         <title></title>
     </head>
     <script src="<?=URL?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    
+   
     <body>
+        <header>
+            <h1>Bufete Abogados Duralex</h1>
+        </header>
+
+        
+        
         <?php
             if(isset($_SESSION["USR"])){
         ?>
@@ -30,15 +37,43 @@ and open the template in the editor.
         }
         if(!isset($_SESSION["USR"])){
         ?>
+        <section>
+        <article>
+        <fieldset>
         <form action="<?=URL?>controlador/valida.php" method="post">
-            <div><label>Nombre</label><input id="nomusu" type="text" name="nomusu"></div>
-            <div><label>Clave</label><input id="claveusu" type="password" name="claveusu"></div>
-            <input id="enviar" type="button" value="Acceder">
-            <div id="msjweb"></div>
+            <table>
+            <tr>
+                <td>
+                    <div><label>Nombre: </label><input id="nomusu" type="text" name="nomusu"></div>
+                </td>
+            </tr>    
+            <tr>
+                <td>
+                    <div><label>Clave: </label><input id="claveusu" type="password" name="claveusu"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="enviar" type="button" value="Acceder">
+                    <div id="msjweb"></div>
+                </td>
+            </tr>
+            
+            </table>
         </form>
+        </fieldset>
+        </article>
+        </section>
         <?php 
             }
            ?>
+        
+        <footer>
+        <h1>Bufete Abogados Duralex LTDA</h1>
+        <h2>Teléfono 222785690 - 2255986185</a></h2>
+        <h2>Dirección av.Antonio Varas 666</a></h2>
+        </footer>
+        
     </body>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -66,4 +101,5 @@ and open the template in the editor.
         });//Ready del document
     
     </script>
+   
 </html>
