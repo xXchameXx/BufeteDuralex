@@ -11,7 +11,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="solemne1css.css" title="miEjemplo" media="all" />
+
         <meta charset="UTF-8">
         <title></title>
     </head>

@@ -19,13 +19,16 @@ class Usuario{
         $this->user=$usu;
         $this->clave=$pwd;
     }
+    public function __construct1() {
+        
+    }
     
-//    public function __construct2($usu="",$pwd="",$perfil="",$abogado="") {
-//        $this->user=$usu;
-//        $this->clave=$pwd;
-//        $this->perfil_idPerfil =$perfil;
-//        $this->abogado_rutAbogado =$abogado;
-//    }
+    public function __construct2($usu="",$pwd="",$perfil="",$abogado="") {
+        $this->user=$usu;
+        $this->clave=$pwd;
+        $this->perfil_idPerfil =$perfil;
+        $this->abogado_rutAbogado =$abogado;
+    }
     
     public function VerificaAcceso(){
         $oConn=new Conexion();
@@ -55,6 +58,24 @@ class Usuario{
         else{
             return false;
         }
+            
+    }
+    public function listarUsuario(){
+        $oConn=new Conexion();
+        
+        if($oConn->Conectar())
+            $db=$oConn->objconn;            
+        else
+            return false;
+
+        
+        
+        $sql="SELECT * FROM usuario";
+        
+        $listadoUsuario=$db->query($sql);
+        
+       
+        return $listadoUsuario;
             
     }
 }
