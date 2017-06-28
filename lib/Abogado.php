@@ -51,4 +51,39 @@ class Abogado {
         return $listadoAbogado;
             
     }
+    public function convertDateToMsSQL($date)
+{
+	if($this->validateDateEs($date))
+	{
+		$values=preg_split('/(\/|-)/',$date);
+		$values[0]=(strlen($values[0])==2?$values[0]:"0".$values[0]);
+		$values[1]=(strlen($values[1])==2?$values[1]:"0".$values[1]);
+		$values[2]=(strlen($values[2])==4?$values[2]:substr(date("Y"),0,2).$values[4]);
+		return $values[2].$values[1].$values[0];
+	}
+	return "";
+}
+ 
+/**
+	* Funcion para validar una fecha en formato dd/mm/yyyy
+	*/
+public function validateDateEs($date)
+{
+	$pattern="/^(0?[1-9]|[12][0-9]|[3][01])[\/|-](0?[1-9]|[1][12])[\/|-]((19|20)?[0-9]{2})$/";
+	if(preg_match($pattern,$date))
+		return true;
+	return false;
+}
+    
+    public function agregarAbogado($rut="",$nom="",$apat="",$amat="",$fca="",$vha="",$eid=""){
+        $oConn=new Conexion();
+        
+        if($oConn->Conectar()){
+                $db=$oConn->objconn;        
+                $sql="insert into abogado (rutAbogado,nombreAbogado,apellidoPatAbogado,apellidoMatAbogado,fechaContratacionAbogado,ValorHoraAbogado,Especialidad_idEspecialidad) values ('$rut','$nom','$apat','$amat','$fca','$vha','$eid')";
+        
+                $insertCliente=$db->query($sql);  
+        }
+           
+    }
 }

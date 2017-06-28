@@ -51,4 +51,16 @@ class Cliente {
         return $listadoCliente;
             
     }
+    public function agregarCliente($rut="",$nom="",$apat="",$amat="",$dire="",$tel="",$tipop=""){
+        $oConn=new Conexion();
+        
+        if($oConn->Conectar()){
+                $db=$oConn->objconn;        
+                $sql="insert into cliente (rutCliente,nombreCliente,apellidoPatCliente,apellidoMatCliente,direccionCliente,telefonoCliente,TipoPersona_idTipoPersona) values ('$rut','$nom','$apat','$amat','$dire','$tel','$tipop')";
+        
+                $insertCliente=$db->query($sql);  
+        }
+           
+    }
+  
 }
