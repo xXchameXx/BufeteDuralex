@@ -6,15 +6,26 @@
  * and open the template in the editor.
  */
 class Usuario{
-    var $idusuario;
-    var $nombre;
-    var $nomusuario;
+    var $idUsuario;
+    var $user;
     var $clave;
+    var $perfil_idPerfil;
+    var $cliente_rutCliente;
+    var $abogado_rutAbogado;
+    
+    
     
     public function __construct($usu="",$pwd="") {
-        $this->nomusuario=$usu;
+        $this->user=$usu;
         $this->clave=$pwd;
     }
+    
+//    public function __construct2($usu="",$pwd="",$perfil="",$abogado="") {
+//        $this->user=$usu;
+//        $this->clave=$pwd;
+//        $this->perfil_idPerfil =$perfil;
+//        $this->abogado_rutAbogado =$abogado;
+//    }
     
     public function VerificaAcceso(){
         $oConn=new Conexion();
@@ -27,15 +38,18 @@ class Usuario{
         $clavemd5=md5($this->clave);
         
         $sql="SELECT * FROM usuario"
-             ." WHERE user='$this->nomusuario' and clave='$clavemd5'";
+             ." WHERE user='$this->user' and clave='$clavemd5'";
         
         $resultado=$db->query($sql);
         
        
         if($resultado->num_rows>=1){
             $row = $resultado->fetch_row();
-            $this->idusuario=$row[0];
-            $this->nombre=$row[4];
+            $this->idUsuario=$row[0];
+            $this->user=$row[1];
+            $this->perfil_idPerfil=$row[3];
+            $this->cliente_rutCliente=$row[4];
+            $this->abogado_rutAbogado=$row[5];
             return true;
         }
         else{

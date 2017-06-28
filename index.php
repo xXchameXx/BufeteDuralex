@@ -29,7 +29,7 @@ and open the template in the editor.
         ?>
         <div><?php
                 $oUsu=$_SESSION["USR"];
-                echo $oUsu->nombre;
+                echo $oUsu->user;
                 ?>
             <a href="<?=URL?>controlador/cierrasesion.php">Cerrar sesión</a>
         </div>

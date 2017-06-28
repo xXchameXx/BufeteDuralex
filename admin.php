@@ -23,7 +23,7 @@ exit;
         ?>
         <div id="contenedor"><?php
                 $oUsu=$_SESSION["USR"];
-                echo $oUsu->nombre;
+                echo $oUsu->perfil_idPerfil;
                 ?>
             <a href="<?=URL?>controlador/cierrasesion.php">Cerrar sesión</a>
             <?php }?>
