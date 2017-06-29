@@ -17,6 +17,7 @@ if (isset($_SESSION["USR"])) {
         <h1>Consultas estadisticas</h1>
         <br>
         <a href="#"><i class="fa fa-home fa-2x">estadisticas</i></a>
+        
     <?php } 
     
     if ($oUsu->perfil_idPerfil == 2) {
@@ -30,6 +31,8 @@ if (isset($_SESSION["USR"])) {
         <a href="MantenedorAbogado.php"><i class="fa fa-home fa-2x">abogados</i></a>
         <br>
         <a href="MantenedorUsuario.php"><i class="fa fa-home fa-2x">usuarios</i></a>
+        <br>
+        <a href="<?=URL?>controlador/cierrasesion.php"><i class="fa fa-home fa-2x">Cerrar Sesion</i></a>
     <?php } 
     
     if ($oUsu->perfil_idPerfil == 3) {

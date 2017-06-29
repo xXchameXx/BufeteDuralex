@@ -14,6 +14,7 @@ and open the template in the editor.
 
         <meta charset="UTF-8">
         <title></title>
+        <?php include './cabecera.php';?>
     </head>
     <script src="<?=URL?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
    
@@ -90,7 +91,7 @@ and open the template in the editor.
                             ,success:function(resweb){
                                 $('#msjweb').html(resweb);
                                 if(resweb=="Todo Bien"){
-                                    location.href="<?=URL;?>/admin.php";
+                                    location.href="<?=URL;?>admin.php";
                                 }
                             }
                         });//Cierre AJAX                     

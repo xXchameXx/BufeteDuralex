@@ -14,10 +14,7 @@ exit;
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <link href="css/estiloprincipal.css" rel="stylesheet" type="text/css"/>
-        <link href="css/datatables/media/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
-        <script src="css/datatables/media/js/jquery.js" type="text/javascript"></script>
-        <script src="css/datatables/media/js/jquery.dataTables.js" type="text/javascript"></script>
+        <?php include './cabecera.php';?>
         <script>
              $(document).ready(function() 
              {

@@ -12,8 +12,7 @@ exit;
 <html>
     <head>
     <title></title>
-    <link href="css/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-    <link href="css/estiloprincipal.css" rel="stylesheet" type="text/css"/>
+    <?php include './cabecera.php';?>
     
     </head>
     
