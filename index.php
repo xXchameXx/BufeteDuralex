@@ -47,12 +47,12 @@ and open the template in the editor.
             <table>
             <tr>
                 <td>
-                    <div><label>Nombre: </label><input id="nomusu" type="text" name="nomusu"></div>
+                    <div><label>Nombre__: </label><input id="nomusu" type="text" name="nomusu"></div>
                 </td>
             </tr>    
             <tr>
                 <td>
-                    <div><label>Clave: </label><input id="claveusu" type="password" name="claveusu"></div>
+                    <div><label>Clave____: </label><input id="claveusu" type="password" name="claveusu"></div>
                 </td>
             </tr>
             <tr>

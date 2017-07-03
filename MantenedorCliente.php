@@ -35,6 +35,35 @@ exit;
         });
         </script>
         
+         <script type="text/javascript">
+        $(document).ready(function(){
+          $('#elimina').click(function(){
+                $('#popupElimina').fadeIn('slow');
+                        return false;
+            });
+
+            $('#close').click(function(){
+                $('#popup').fadeOut('slow');
+                        return false;
+            });
+        });
+        </script>
+        
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#edita').click(function(){
+                $('#popupEdita').fadeIn('slow');
+                        return false;
+            });
+
+            $('#close').click(function(){
+                $('#popup').fadeOut('slow');
+                        return false;
+            });
+        });
+        </script>
+        
     </head>
     <body>
         <?php
@@ -86,10 +115,10 @@ exit;
                                         <?php echo $row['TipoPersona_idTipoPersona']; ?>
                                     </td>
                                     <td>
-                                        <input class="btn btn-warning" type="button" name="btnEditar" value="Editar">
+                                        <input class="btn btn-warning" type="button" name="btnEditar" value="Editar" id="edita">
                                     </td>
                                     <td>
-                                        <input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar">
+                                        <input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar" id="elimina">
                                     </td>
                                     
                                 </tr>
@@ -124,6 +153,30 @@ exit;
                         </div>
                     </div>
                     <div class="popup-overlay"></div>
+                    
+                     <!-- Eliminar registro -->
+                    <div id="popupElimina" style="display: none; position: absolute">
+                        <div class="content-popup">
+                            <div class="close"><a href="#" id="close"><img src="images/close.png"/></a></div>
+                            <div>
+                                <?php include './eliminaCliente.php';?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popupElimina-overlay"></div> 
+                    
+                     <!-- Editar registro -->
+                     
+                      <div id="popupEdita" style="display: none; position: absolute">
+                        <div class="content-popup">
+                            <div class="close"><a href="#" id="close"><img src="images/close.png"/></a></div>
+                            <div>
+                                <?php include './editaCliente.php';?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popupEdita-overlay"></div> 
+                    
             </div>
         </div>
                     <?php } ?>

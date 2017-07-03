@@ -43,7 +43,21 @@ exit;
             });
 
             $('#close').click(function(){
-                $('#popupElimina').fadeOut('slow');
+                $('#popup').fadeOut('slow');
+                        return false;
+            });
+        });
+        </script>
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#edita').click(function(){
+                $('#popupEdita').fadeIn('slow');
+                        return false;
+            });
+
+            $('#close').click(function(){
+                $('#popup').fadeOut('slow');
                         return false;
             });
         });
@@ -103,7 +117,7 @@ exit;
                                         <?php echo $row['Especialidad_idEspecialidad']; ?>
                                     </td>
                                     <td>
-                                        <input class="btn btn-warning" type="button" name="btnEditar" value="Editar">
+                                        <input class="btn btn-warning" type="button" name="btnEditar" value="Editar" id="edita">
                                     </td>
                                     <td>
                                         <input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar" id="elimina">
@@ -153,6 +167,17 @@ exit;
                         </div>
                     </div>
                     <div class="popupElimina-overlay"></div>
+                    
+                     <!-- Editar registro -->
+                     <div id="popupEdita" style="display: none; position: absolute">
+                        <div class="content-popup">
+                            <div class="close"><a href="#" id="close"><img src="images/close.png"/></a></div>
+                            <div>
+                                <?php include './EditaAbogado.php';?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popupEdita-overlay"></div>
                     
             </div>
         </div>

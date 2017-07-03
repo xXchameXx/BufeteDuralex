@@ -39,6 +39,9 @@ class Abogado {
 
     }
     
+    
+    
+    
     public function listarAbogado(){
         $oConn=new Conexion();
         
@@ -108,6 +111,35 @@ public function validateDateEs($date)
            
     }
     
+    
+      public function editarAbogado($rut="",$nom="",$apat="",$amat="",$fca="",$vha="",$eid=""){
+        //echo $rut;
+        //echo $nom;
+        //echo $apat;
+        //echo $amat;
+        //echo $fca;  
+        //echo $vha;
+        //echo $eid;  
+        $oConn=new Conexion();
+        
+        if($oConn->Conectar()){
+                $db=$oConn->objconn;        
+                //$sql="update abogado set rutAbogado = $rut,nombreAbogado=$nom,apellidoPatAbogado=$apat,apellidoMatAbogado=$amat,fechaContratacionAbogado=$fca,valorHoraAbogado=$vha,Especialidad_idEspecialidad=$eid where rutAbogado = $rut";
+                 //$sql="Update Clientes Set telefono='$telefono' Where nombre='$nombre'";
+                 //$rut="",$nom="",$apat="",$amat="",$fca="",$vha="",$eid="
+                 //$sql = "UPDATE `users` SET `id`='$id',`name`='$name',`email`='$email',`nickname`='$nickname',`password`='$password',`salt`='$salt' WHERE `id`='$id'"; 
+
+                //$sql="UPDATE abogado SET nombreAbogado=$nom,apellidoPatAbogado=$apat,apellidoMatAbogado=$amat,ValorHoraAbogado=$vha,Especialidad_idEspecialidad=$eid WHERE abogado.rutAbogado = $rut";
+                
+                $sql="UPDATE `abogado` SET `nombreAbogado` = '$nom', `apellidoPatAbogado` = '$apat', `apellidoMatAbogado` = '$amat', `fechaContratacionAbogado` = '2017-03-01' WHERE `abogado`.`rutAbogado` = $rut";
+                
+                //echo $sql;      
+        //echo $rut;
+                //echo $sql;
+                $insertCliente=$db->query($sql);  
+        }
+           
+    }
     
     
 }
