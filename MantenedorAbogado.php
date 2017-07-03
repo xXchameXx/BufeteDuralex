@@ -60,7 +60,10 @@ exit;
             <div id="header"></div>
             <div id="menulateral"><?php include('menu.php');?></div>
             <div id="contenido">
-                <fieldset><legend>Mantenedor Abogado</legend>
+                <fieldset>
+                    <legend>Mantenedor Abogado 
+                        <!--<input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar" id="elimina">-->
+                    </legend>
                     <form style="background-color: white;">
                     <table id="example" class="display table-striped table-bordered"  >
                         <thead>

@@ -19,7 +19,7 @@ and open the template in the editor.
             <form  action="controlador/elimnarAbogado.php" method="post" >
                 <div class="form-group">
                         <label >Rut</label>
-                        <input type="text" class="form-control" name="txtRut2" placeholder="Rut">
+                        <input type="text" class="form-control" name="txtRut" placeholder="Rut">
                         
                         <button type="submit" class="btn btn-primary btn-lg btn-block">Eliminar Abogado</button>
                     </div>			

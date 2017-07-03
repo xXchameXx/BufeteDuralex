@@ -21,7 +21,7 @@ and open the template in the editor.
     <script src="<?=URL?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
    
     <body>
-        <header>
+        <header >
             <h1>Bufete Abogados Duralex</h1>
         </header>
 

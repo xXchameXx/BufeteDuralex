@@ -93,15 +93,16 @@ public function validateDateEs($date)
            
     }
     
-    public function eliminarAbogado($rut2=""){
-        
+    public function eliminarAbogado($rut){
+        //echo $rut;
         $oConn=new Conexion();
         
         if($oConn->Conectar()){
                 $db=$oConn->objconn;        
-                //$sql="delete from abogado where rutAbogado = '$rut2'";
-                 $sql="DELETE FROM abogado WHERE rutAbogado = 22222222";
-        
+                $sql="delete from abogado where rutAbogado = $rut";
+                 //$sql="DELETE FROM abogado WHERE rutAbogado = 22222222";
+        //echo $rut;
+                //echo $sql;
                 $insertCliente=$db->query($sql);  
         }
            
