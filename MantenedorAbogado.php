@@ -35,6 +35,20 @@ exit;
         });
         </script>
         
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#elimina').click(function(){
+                $('#popupElimina').fadeIn('slow');
+                        return false;
+            });
+
+            $('#close').click(function(){
+                $('#popupElimina').fadeOut('slow');
+                        return false;
+            });
+        });
+        </script>
+        
     </head>
     <body>
         <?php
@@ -89,7 +103,7 @@ exit;
                                         <input class="btn btn-warning" type="button" name="btnEditar" value="Editar">
                                     </td>
                                     <td>
-                                        <input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar">
+                                        <input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar" id="elimina">
                                     </td>
                                     
                                 </tr>
@@ -124,6 +138,19 @@ exit;
                         </div>
                     </div>
                     <div class="popup-overlay"></div>
+                    
+                    <!-- Eliminar registro -->
+                    
+                     <div id="popupElimina" style="display: none; position: absolute">
+                        <div class="content-popupElimina">
+                            <div class="close"><a href="#" id="close"><img src="images/close.png"/></a></div>
+                            <div>
+                                <?php include './eliminaAbogado.php';?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popupElimina-overlay"></div>
+                    
             </div>
         </div>
                     <?php } ?>

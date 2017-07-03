@@ -33,6 +33,12 @@ class Abogado {
         $this -> especialidad_idEspecialidad = $eid;
     }
     
+    
+      public function __construct2($rut="") {
+        $this -> rutAbogado = $rut;
+
+    }
+    
     public function listarAbogado(){
         $oConn=new Conexion();
         
@@ -86,4 +92,21 @@ public function validateDateEs($date)
         }
            
     }
+    
+    public function eliminarAbogado($rut2=""){
+        
+        $oConn=new Conexion();
+        
+        if($oConn->Conectar()){
+                $db=$oConn->objconn;        
+                //$sql="delete from abogado where rutAbogado = '$rut2'";
+                 $sql="DELETE FROM abogado WHERE rutAbogado = 22222222";
+        
+                $insertCliente=$db->query($sql);  
+        }
+           
+    }
+    
+    
+    
 }

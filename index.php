@@ -16,10 +16,7 @@ and open the template in the editor.
         <title></title>
         <?php include './cabecera.php';?>
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
     </head>
     <script src="<?=URL?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
    
@@ -79,15 +76,15 @@ and open the template in the editor.
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="balanza.jpg" alt="Balanza">
+        <img src="images/balanza.jpg" alt="Balanza">
     </div>
 
     <div class="item">
-      <img src="libros.jpg" alt="Libros">
+        <img src="images/libros.jpg" alt="Libros">
     </div>
 
     <div class="item">
-      <img src="martillo2.jpg" alt="Martillo">
+        <img src="images/martillo2.jpg" alt="Martillo">
     </div>
   </div>
 

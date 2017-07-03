@@ -27,7 +27,7 @@ and open the template in the editor.
 
 #menulateral{
     width: 20%;
-    height:300px;
+    height:500px;
     float:left;
     background-color: yellow;
     
@@ -37,7 +37,7 @@ and open the template in the editor.
 
 #contenido{
       width: 80%;
-    height:300px;
+    height:500px;
     float:left;
     background-color: blue;
     
