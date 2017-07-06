@@ -22,29 +22,30 @@ if (isset($_SESSION["USR"])) {
     
     if ($oUsu->perfil_idPerfil == 2) {
         ?> 
-        <h1>Menu Administrador</h1>
-        <br>
-        <h1>Mantenedores</h1>
-        <br>
-        <a href="MantenedorCliente.php"><i class="fa fa-home fa-2x">Clientes</i></a>
-        <br>
-        <a href="MantenedorAbogado.php"><i class="fa fa-home fa-2x">abogados</i></a>
-        <br>
-        <a href="MantenedorUsuario.php"><i class="fa fa-home fa-2x">usuarios</i></a>
-        <br>
-        <a href="<?=URL?>controlador/cierrasesion.php"><i class="fa fa-home fa-2x">Cerrar Sesion</i></a>
+         <div class="list-group">     
+                    <h2 style="text-align: center" class="list-group-item"><i class="fa fa-university fa-lg"></i>Menu Secretaria<i class="fa fa-university fa-lg"></i></h2>
+                    <i  class="list-group-item"  aria-hidden="true"><hr></i>
+                    <a style="text-align: center" class="list-group-item" href="MantenedorCliente.php"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i> Clientes</a>
+                    <a style="text-align: center" class="list-group-item" href="MantenedorAbogado.php"><i class="fa fa-gavel fa-2x" aria-hidden="true"></i> Abogados</a>
+                    <a style="text-align: center" class="list-group-item" href="MantenedorUsuario.php.php"><i class="fa fa-address-book fa-2x" aria-hidden="true"></i> Usuarios</a>
+                    <i class="list-group-item"  aria-hidden="true"><hr></i>
+                    <a style="text-align: center" class="list-group-item" href="<?=URL?>controlador/cierrasesion.php"><i aria-hidden="true" class="fa fa-sign-out fa-2x"></i> Cerrar Sesion</a>
+                </div>
     <?php } 
     
     if ($oUsu->perfil_idPerfil == 3) {
         ?> 
-        <h1>Menu Secretaria</h1>
-        <h1>Consultas</h1>
-        <a href="ConsultaCliente.php"><i class="fa fa-home fa-2x">Clientes</i></a>
-        <a href="ConsultaAbogado.php"><i class="fa fa-home fa-2x">Abogados</i></a>
-        <a href="#"><i class="fa fa-home fa-2x">Atenciones</i></a>
-        <br>
-
-        <a href="#"><i class="fa fa-home fa-2x">Agenda</i></a>
+       
+        
+        <div class="list-group">     
+                    <h2 style="text-align: center" class="list-group-item"><i class="fa fa-university fa-lg"></i>Menu Secretaria<i class="fa fa-university fa-lg"></i></h2>
+                    <i  class="list-group-item"  aria-hidden="true"><hr></i>
+                    <a style="text-align: center" class="list-group-item" href="ConsultaCliente.php"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i> Clientes</a>
+                    <a style="text-align: center" class="list-group-item" href="ConsultaAbogado.php"><i class="fa fa-gavel fa-2x" aria-hidden="true"></i> Abogados</a>
+                    <a style="text-align: center" class="list-group-item" href="ConsultaAtenciones.php"><i class="fa fa-address-book fa-2x" aria-hidden="true"></i> Atenciones</a>
+                    <i class="list-group-item"  aria-hidden="true"><hr></i>
+                    <a style="text-align: center" class="list-group-item" href="#"><i aria-hidden="true" class="fa fa-book fa-2x"></i> Agenda</a>
+                </div>
     <?php } 
     
     if ($oUsu->perfil_idPerfil == 4) {

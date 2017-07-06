@@ -87,3 +87,18 @@ and open the template in the editor.
 	position: absolute;
     right: 15px;
 }
+
+ hr { 
+   border-top: 2px solid #adadad; 
+   border-bottom: 2px solid #adadad; 
+   border-left:none; 
+   border-right:none; 
+   height: 6px; 
+ } 
+ body { 
+   background-color: wheat;
+ } 
+ 
+ 
+ 
+ 
