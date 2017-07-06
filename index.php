@@ -23,9 +23,12 @@ and open the template in the editor.
     </head>
     <script src="<?=URL?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
    
-    <body>
+    <body style=" background-color: wheat;">
         <header >
-            <h1>Bufete Abogados Duralex</h1>
+            <h1 style="text-align: center">Bufete Abogados Duralex</h1>
+            <br>
+            <br>
+            <br>
         </header>
 
         
@@ -46,27 +49,25 @@ and open the template in the editor.
         <section>
         <article>
         <fieldset>
-        <form action="<?=URL?>controlador/valida.php" method="post">
-            <table>
-            <tr>
-                <td>
-                    <div><label>Nombre__: </label><input id="nomusu" type="text" name="nomusu"></div>
-                </td>
-            </tr>    
-            <tr>
-                <td>
-                    <div><label>Clave____: </label><input id="claveusu" type="password" name="claveusu"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input id="enviar" type="button" value="Acceder">
-                    <div id="msjweb"></div>
-                </td>
-            </tr>
-            
-            </table>
-        </form>
+            <form action="<?= URL ?>controlador/valida.php" method="post">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon fa fa-user">Usuario</span>
+                            <input type="text" class="form-control" id="nomusu" name="nomusu" placeholder="User" required>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon fa fa-key">Contraseña</span>
+                            <input type="password" class="form-control" id="claveusu" type="password" name="claveusu" placeholder="Clave" required>
+                        </div>
+
+                        <br>
+                        <input class="btn btn-block btn-primary" id="enviar" type="button" value="Acceder">
+                        <div id="msjweb"></div>
+
+                    </div>
+
+                </form>
             
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -109,10 +110,10 @@ and open the template in the editor.
             }
            ?>
         
-        <footer>
-        <h1>Bufete Abogados Duralex LTDA</h1>
-        <h2>Teléfono 222785690 - 2255986185</a></h2>
-        <h2>Dirección av.Antonio Varas 666</a></h2>
+        <footer >
+            <h1 style="text-align: center">Bufete Abogados Duralex LTDA</h1>
+        <h2 style="text-align: center">Teléfono 222785690 - 2255986185</a></h2>
+        <h2 style="text-align: center">Dirección av.Antonio Varas 666</a></h2>
         </footer>
         
     </body>

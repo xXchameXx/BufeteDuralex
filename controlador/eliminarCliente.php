@@ -6,7 +6,7 @@ include '../librerias.php';
 
 try {
     $objCliente = new Cliente();
-    $rut = $_POST['txtRut'];
+    $rut = $_REQUEST['rut'];
     
     
     $objCliente->eliminarCliente($rut);

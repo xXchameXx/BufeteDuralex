@@ -115,11 +115,12 @@ exit;
                                         <?php echo $row['TipoPersona_idTipoPersona']; ?>
                                     </td>
                                     <td>
-                                        <input class="btn btn-warning" type="button" name="btnEditar" value="Editar" id="edita">
+                                        <input class="btn btn-warning" type="button" name="btnEditar" value="Editar"   >
+                                        <a  href="?rut=<?= $row['rutCliente']?>" id="edita">editar</a>
                                     </td>
                                     <td>
                                         
-                                        <input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar" id="elimina">
+                                        <input class="btn btn-danger" type="button" name="btnEliminar" value="Eliminar" onclick="window.location.href= '<?=URL?>controlador/eliminarCliente.php?rut=<?= $row['rutCliente']?>'">
                                     </td>
                                     
                                 </tr>

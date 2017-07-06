@@ -23,10 +23,11 @@ class Usuario{
         
     }
     
-    public function __construct2($usu="",$pwd="",$perfil="",$abogado="") {
+    public function __construct2($usu="",$pwd="",$perfil="",$cliente="",$abogado="") {
         $this->user=$usu;
         $this->clave=$pwd;
         $this->perfil_idPerfil =$perfil;
+        $this->cliente_rutCliente =$cliente;
         $this->abogado_rutAbogado =$abogado;
     }
     
@@ -77,5 +78,17 @@ class Usuario{
        
         return $listadoUsuario;
             
+    }
+    
+    public function agregarUsuario($id="",$usu="",$pwd="",$perfil="",$cliente="",$abogado=""){
+        $oConn=new Conexion();
+        
+        if($oConn->Conectar()){
+                $db=$oConn->objconn;        
+                $sql="insert into usuario (idUsuario,user,clave,Perfil_idPerfil,Cliente_rutCliente,Abogado_rutAbogado) values ('$id','$usu','$pwd','$perfil','$cliente','$abogado')";
+        
+                $insertUsuario=$db->query($sql);  
+        }
+           
     }
 }

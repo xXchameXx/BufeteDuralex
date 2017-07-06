@@ -39,8 +39,8 @@ if (isset($_SESSION["USR"])) {
         ?> 
         <h1>Menu Secretaria</h1>
         <h1>Consultas</h1>
-        <a href="#"><i class="fa fa-home fa-2x">Clientes</i></a>
-        <a href="#"><i class="fa fa-home fa-2x">Abogados</i></a>
+        <a href="ConsultaCliente.php"><i class="fa fa-home fa-2x">Clientes</i></a>
+        <a href="ConsultaAbogado.php"><i class="fa fa-home fa-2x">Abogados</i></a>
         <a href="#"><i class="fa fa-home fa-2x">Atenciones</i></a>
         <br>
 

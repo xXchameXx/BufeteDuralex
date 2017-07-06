@@ -18,8 +18,9 @@ and open the template in the editor.
         <fieldset><legend>Editar Cliente</legend>                 
            <form  action="controlador/editarCliente.php" method="post" >
                 <div class="form-group">
+                    
                         <label >Rut</label>
-                        <input type="text" class="form-control" name="txtRut" placeholder="Rut">
+                        <input type="text" class="form-control" name="txtRut"  placeholder="Rut">
                         <br>
                         <label >Nombre</label>
                         <input type="text" class="form-control" name="txtNombre" placeholder="Nombre">
