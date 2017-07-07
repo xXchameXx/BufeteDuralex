@@ -4,7 +4,7 @@ class Conexion{
     
     /*Metodo de conexión*/
     var $dbusr="root";
-    var $dbpwd="avaras08";
+    var $dbpwd="";
     var $dbhost="localhost";
     var $dbname="bufeteabogados";
     

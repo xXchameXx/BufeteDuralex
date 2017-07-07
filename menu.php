@@ -27,7 +27,7 @@ if (isset($_SESSION["USR"])) {
                     <i  class="list-group-item"  aria-hidden="true"><hr></i>
                     <a style="text-align: center" class="list-group-item" href="MantenedorCliente.php"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i> Clientes</a>
                     <a style="text-align: center" class="list-group-item" href="MantenedorAbogado.php"><i class="fa fa-gavel fa-2x" aria-hidden="true"></i> Abogados</a>
-                    <a style="text-align: center" class="list-group-item" href="MantenedorUsuario.php.php"><i class="fa fa-address-book fa-2x" aria-hidden="true"></i> Usuarios</a>
+                    <a style="text-align: center" class="list-group-item" href="MantenedorUsuario.php"><i class="fa fa-address-book fa-2x" aria-hidden="true"></i> Usuarios</a>
                     <i class="list-group-item"  aria-hidden="true"><hr></i>
                     <a style="text-align: center" class="list-group-item" href="<?=URL?>controlador/cierrasesion.php"><i aria-hidden="true" class="fa fa-sign-out fa-2x"></i> Cerrar Sesion</a>
                 </div>
