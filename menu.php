@@ -43,7 +43,7 @@ if (isset($_SESSION["USR"])) {
                     <a style="text-align: center" class="list-group-item" href="ConsultaAbogado.php"><i class="fa fa-gavel fa-2x" aria-hidden="true"></i> Abogados</a>
                     <a style="text-align: center" class="list-group-item" href="ConsultaAtencion.php"><i class="fa fa-address-book fa-2x" aria-hidden="true"></i> Atenciones</a>
                     <i class="list-group-item"  aria-hidden="true"><hr></i>
-                    <a style="text-align: center" class="list-group-item" href="#"><i aria-hidden="true" class="fa fa-book fa-2x"></i> Agenda</a>
+                    <!--<a style="text-align: center" class="list-group-item" href="#"><i aria-hidden="true" class="fa fa-book fa-2x"></i> Agenda</a>-->
                     <i class="list-group-item"  aria-hidden="true"><hr></i>
                     <a style="text-align: center" class="list-group-item" href="<?=URL?>controlador/cierrasesion.php"><i aria-hidden="true" class="fa fa-sign-out fa-2x"></i> Cerrar Sesion</a>
                 </div>

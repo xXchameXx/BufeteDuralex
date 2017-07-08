@@ -64,13 +64,14 @@ class Atencion {
     }
 
     public function __construct1($idate = "", $fecha = "", $idest = "", $ruta = "", $rutc = "") {
-        $this->idAtencion = $idate;
-        $this->fechaHoraAtencion = $fecha;
-        $this->idEstado = $idest;
-        $this->rutAbogado = $ruta;
-        $this->rutCliente = $rutc;
+        $this->idatencion = $idate;
+        $this->FechaHoraAtencion = $fecha;
+        $this->Estado_idEstado = $idest;
+        $this->Abogado_rutAbogado = $ruta;
+        $this->Cliente_rutCliente = $rutc;
     }
 
+   
     public function listarAtenciones() {
         $oConn = new Conexion();
 
@@ -106,13 +107,19 @@ class Atencion {
         return $listadoAtencionCliente;
     }
 
-    public function agregarAtencion($fecha = "", $idest = "", $ruta = "", $rutc = "") {
+    public function agregarAtencion($idate = "",$fecha = "", $idest = "", $ruta = "", $rutc = "") {
         $oConn = new Conexion();
-
+    //echo $idate;  
+    //echo $fecha;
+    //echo $idest;
+    //echo $ruta;
+    //echo $rutc;
+        
         if ($oConn->Conectar()) {
             $db = $oConn->objconn;
-            $sql = "insert into atencion (FechaHoraAtencion, Estado_idEstado, Abogado_rutAbogado, Cliente_rutCliente) values ('$fecha','$idest','$ruta','$rutc')";
-
+            $sql = "insert into atencion (idatencion,FechaHoraAtencion, Estado_idEstado, Abogado_rutAbogado, Cliente_rutCliente) values (NULL, '$fecha', '$idest', '$ruta', '12345678')";
+           // echo $sql;
+//INSERT INTO `atencion` (`idatencion`, `FechaHoraAtencion`, `Estado_idEstado`, `Abogado_rutAbogado`, `Cliente_rutCliente`) VALUES (NULL, '2016-08.12', '2', '22222222', '15791135');
             $insertAtencion = $db->query($sql);
         }
     }

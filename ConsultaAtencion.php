@@ -21,7 +21,19 @@ exit;
                $('#example').DataTable();
              } );
         </script>
-        
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#open').click(function(){
+                $('#popup').fadeIn('slow');
+                        return false;
+            });
+
+            $('#close').click(function(){
+                $('#popup').fadeOut('slow');
+                        return false;
+            });
+        });
+        </script>
         
     </head>
     <body>
@@ -94,12 +106,44 @@ exit;
                         </tfoot>
                     </table>
                                
-                        <button type="button" class="btn btn-success btn-lg btn-block " id="open" >Volver</button>
-                            
+                       <!-- <button type="button" class="btn btn-success btn-lg btn-block " id="open" >Volver</button>-->
+                        <button type="button" class="btn btn-success btn-lg btn-block " id="open" >Agendar Nueva Atención</button>   
                 </form>
                     
                 </fieldset>
+                     <div id="popup" style="display: none; position: absolute">
+                        <div class="content-popup">
+                            <div class="close"><a href="#" id="close"><img src="images/close.png"/></a></div>
+                            <div>
+                                <?php include './RegistraAtencion.php';?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-overlay"></div>
                     
+                     <!-- Eliminar registro -->
+                    <div id="popupElimina" style="display: none; position: absolute">
+                        <div class="content-popup">
+                            <div class="close"><a href="#" id="close2"><img src="images/close.png"/></a></div>
+                            <div>
+                                <?php include './eliminaCliente.php';?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-overlay"></div> 
+                    
+                     <!-- Editar registro -->
+                     
+                      <div id="popupEdita" style="display: none; position: absolute">
+                        <div class="content-popup">
+                            <div class="close"><a href="#" id="close3"><img src="images/close.png"/></a></div>
+                            <div>
+                                <?php include './editaCliente.php';?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-overlay"></div> 
+              
                     
             </div>
         </div>
