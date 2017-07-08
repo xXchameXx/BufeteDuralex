@@ -112,7 +112,15 @@ exit;
                                         <?php echo $row['telefonoCliente']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $row['TipoPersona_idTipoPersona']; ?>
+                                                <?php
+                                                if ($row['TipoPersona_idTipoPersona'] == 1) {
+                                                    echo "Natural";  
+                                                } 
+                                                if ($row['TipoPersona_idTipoPersona'] == 2) {
+                                                    echo "Juridica";  
+                                                } 
+                                                   
+                                                ?>
                                     </td>
                                     <td>
                                         <input class="btn btn-warning" type="button" name="btnEditar" value="Editar"   >

@@ -73,8 +73,21 @@ exit;
                                         <?php echo $row['clave']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $row['Perfil_idPerfil']; ?>
-                                    </td>
+                                                <?php
+                                                if ($row['Perfil_idPerfil'] == 1) {
+                                                    echo "Gerente";
+                                                }
+                                                if ($row['Perfil_idPerfil'] == 2) {
+                                                    echo "Administrador";
+                                                }
+                                                if ($row['Perfil_idPerfil'] == 3) {
+                                                    echo "Secretaria";
+                                                }
+                                                if ($row['Perfil_idPerfil'] == 4) {
+                                                    echo "Cliente";
+                                                }
+                                                ?>
+                                            </td>
                                     <td>
                                         <?php echo $row['Cliente_rutCliente']; ?>
                                     </td>

@@ -72,9 +72,34 @@ exit;
                                     <td>
                                         <?php echo $row['ValorHoraAbogado']; ?>
                                     </td>
-                                    <td>
-                                        <?php echo $row['Especialidad_idEspecialidad']; ?>
-                                    </td>
+                                    <td>                                     
+                                                <?php
+                                                if ($row['Especialidad_idEspecialidad'] == 1) {
+                                                    echo "Civil";
+                                                }
+                                                if ($row['Especialidad_idEspecialidad'] == 2) {
+                                                    echo "Penal";
+                                                }
+                                                if ($row['Especialidad_idEspecialidad'] == 3) {
+                                                    echo "Procesal";
+                                                }
+                                                if ($row['Especialidad_idEspecialidad'] == 4) {
+                                                    echo "Publico";
+                                                }
+                                                if ($row['Especialidad_idEspecialidad'] == 5) {
+                                                    echo "Comercial";
+                                                }
+                                                if ($row['Especialidad_idEspecialidad'] == 6) {
+                                                    echo "Economico";
+                                                }
+                                                if ($row['Especialidad_idEspecialidad'] == 7) {
+                                                    echo "Tributario";
+                                                }
+                                                if ($row['Especialidad_idEspecialidad'] == 8) {
+                                                    echo "Laboral";
+                                                }
+                                                ?>                                        
+                                            </td>
                                     
                                     
                                     

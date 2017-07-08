@@ -1,7 +1,7 @@
 <?php
 include 'librerias.php';
 session_start();
-include 'controlador/listarCliente.php';
+include 'controlador/listarAtencion.php';
 if(!isset($_SESSION["USR"])){
                 
 header('Location: '.URL);
@@ -39,45 +39,45 @@ exit;
                     <table id="example" class="display table-striped table-bordered"  >
                         <thead>
                             <tr>
-                                <td>RUT</td>
-                                <td>NOMBRE</td>
-                                <td>APELLIDO PATERNO</td>
-                                <td>APELLIDO MATERNO</td>
-                                <td>DIRECCION</td>
-                                <td>TELEFONO</td>
-                                <td>TIPO PERSONA</td>
+                                <td>ID</td>
+                                <td>FECHA Y HORA</td>
+                                <td>ESTADO</td>
+                                <td>RUT ABOGADO</td>
+                                <td>RUT CLIENTE</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while ($row = $listaCli->fetch_assoc()) { ?>
+                            <?php while ($row = $listaAte->fetch_assoc()) { ?>
                                 <tr>
-                                    <td><?php echo $row['rutCliente']; ?>
+                                    <td><?php echo $row['idatencion']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $row['nombreCliente']; ?>
+                                        <?php $date = date_create($row['FechaHoraAtencion']); echo date_format($date, 'd-m-y H:i'); ?>
                                     </td>
                                     <td>
-                                        <?php echo $row['apellidoPatCliente']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $row['apellidoMatCliente']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $row['direccionCliente']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $row['telefonoCliente']; ?>
-                                    </td>
-                                    <td>
-                                        <?php
-                                                if ($row['TipoPersona_idTipoPersona'] == 1) {
-                                                    echo "Natural";  
+                                                <?php
+                                                if ($row['Estado_idEstado'] == 1) {
+                                                    echo "Agendada";
                                                 } 
-                                                if ($row['TipoPersona_idTipoPersona'] == 2) {
-                                                    echo "Juridica";  
+                                                if ($row['Estado_idEstado'] == 2) {
+                                                    echo "Confirmada";
                                                 } 
-                                                   
+                                                if ($row['Estado_idEstado'] == 3) {
+                                                    echo "Anulada";
+                                                } 
+                                                if ($row['Estado_idEstado'] == 4) {
+                                                    echo "Perdida";
+                                                } 
+                                                if ($row['Estado_idEstado'] == 5) {
+                                                    echo "Realizada";
+                                                } 
                                                 ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row['Abogado_rutAbogado']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row['Cliente_rutCliente']; ?>
                                     </td>
                                     
                                 </tr>
@@ -85,13 +85,11 @@ exit;
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td>RUT</td>
-                                <td>NOMBRE</td>
-                                <td>APELLIDO PATERNO</td>
-                                <td>APELLIDO MATERNO</td>
-                                <td>DIRECCION</td>
-                                <td>TELEFONO</td>
-                                <td>TIPO PERSONA</td>
+                                <td>ID</td>
+                                <td>FECHA Y HORA</td>
+                                <td>ESTADO</td>
+                                <td>RUT ABOGADO</td>
+                                <td>RUT CLIENTE</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -110,4 +108,6 @@ exit;
         
     </body>
 </html>
+
+
 

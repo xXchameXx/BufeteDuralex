@@ -38,8 +38,14 @@ and open the template in the editor.
                         <br>
                         <label >Especialidad</label>
                         <select class="form-control" name="ddlEspecialidad">
-                            <option value="1">especialidad 1</option>
-                            <option value="2">especialidad 2</option>
+                            <option value="1">Civil</option>
+                            <option value="2">Penal</option>
+                            <option value="3">Procesal</option>
+                            <option value="4">Publico</option>
+                            <option value="5">Comercial</option>
+                            <option value="6">Economico</option>
+                            <option value="7">Tributario</option>
+                            <option value="8">Laboral</option>
                         </select>
                         <br>
                         <br>
